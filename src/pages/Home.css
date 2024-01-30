@@ -1,0 +1,40 @@
+
+
+
+.btn1 {
+    width: 160px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+#button1 svg {
+    align-self: flex-start;
+}
+
+#button1 span {
+    align-self: flex-start;
+    font-size: large;
+}
+
+#button2 {
+    background-color: black;
+    border: 2px solid black;
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+
+    /* Adjust as needed */
+    .btn1 {
+        width: 100%;
+        /* Full width on smaller screens */
+        max-width: 160px;
+        /* Limit maximum width */
+        height: auto;
+        /* Let height adjust according to content */
+    }
+}
