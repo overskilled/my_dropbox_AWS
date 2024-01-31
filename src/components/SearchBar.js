@@ -1,23 +1,31 @@
 import React from 'react';
-import { FaSearch } from 'react-icons/fa'; // Assuming you're using react-icons for the search icon
+import { Row, Col } from 'react-bootstrap';
+import "./SearchBar.css";
+import { FaSearch } from 'react-icons/fa'; 
 
-const SearchBar = ({ onChange }) => {
+function SearchBar() {
     return (
-        <div className="input-group">
-            <input
-                type="text"
-                className="form-control"
-                placeholder="Search"
-                onChange={onChange}
-            />
-            <div className="input-group-append">
-                <button className="btn btn-outline-secondary" type="button">
-                <FaSearch className="search-icon" />
+        <Row xs={1} md={2}>
+            <Col >
+                <form action="#" method="GET" class="form">
+                    <div className='input-group w-100'>
+                        <input
+                            type="text"
+                            className="form-control mr-2"
+                            placeholder="Search"
+                        />
+                        <div className='input-group-append'>
+                            <button className="btn bg-primary mr-2" type="button">
+                                <FaSearch className="search-icon" />
 
-                </button>
-            </div>
-        </div>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </Col>
+        </Row>
+
     );
-};
+}
 
 export default SearchBar;

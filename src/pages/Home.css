@@ -27,14 +27,9 @@
 
 /* Responsive styles */
 @media (max-width: 576px) {
-
-    /* Adjust as needed */
     .btn1 {
         width: 100%;
-        /* Full width on smaller screens */
         max-width: 160px;
-        /* Limit maximum width */
         height: auto;
-        /* Let height adjust according to content */
     }
 }
