@@ -1,20 +1,27 @@
 import { Amplify } from 'aws-amplify';
 
-import { Authenticator } from '@aws-amplify/ui-react';
+import { Authenticator, withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
 import awsExports from './aws-exports';
+import { Container } from 'react-bootstrap';
+
 Amplify.configure(awsExports);
 
-export default function App() {
+function App() {
   return (
-    <Authenticator>
-      {({ signOut, user }) => (
-        <main>
-          <h1>Hello {user.username}</h1>
-          <button onClick={signOut}>Sign out</button>
-        </main>
-      )}
-    </Authenticator>
+    <Container className='my-5'>
+      <Authenticator>
+        {({ signOut, user }) => (
+          <main>
+            <Heading>Hello {user.username}</Heading>
+            <Button onClick={signOut}>Sign out</Button>
+          </main>
+        )}
+      </Authenticator>
+    </Container>
+      
   );
 }
+
+export default withAuthenticator(App);
