@@ -1,6 +1,6 @@
 {
   "auth": {
-    "mydropbox52390bcf": {
+    "mydropboxbcd89db2": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -17,7 +17,8 @@
         ],
         "socialProviders": [],
         "usernameAttributes": [
-          "EMAIL"
+          "EMAIL",
+          "PHONE_NUMBER"
         ],
         "verificationMechanisms": [
           "EMAIL"
